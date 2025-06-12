@@ -1,4 +1,118 @@
-// this file creates the core.css import here all the common styles for your theme. 
+// this file creates the core.css import here all the common styles for your theme.
 
 // @use "./build/core/variables";
 // @use "./build/core/custom-media-breakpoints";
+
+header.site-header-desktop, header.site-header-mobile {
+  background: var(--pgn-color-primary-base);
+  color: var(--pgn-color-white);
+  .icon-button {
+    color: var(--pgn-color-white);
+  }
+  .dropdown-header {
+    color: var(--pgn-color-primary-base);
+    &.profile-label {
+      color: var(--pgn-color-primary-base);
+      font-weight: bold;
+    }
+  }
+}
+
+header.site-header-desktop {
+
+  .main-nav {
+    font-size: 1rem;
+    .nav-link {
+      color: var(--pgn-color-white);
+      text-decoration: none;
+      box-sizing: border-box;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      &:hover, &:active, &:focus {
+        text-decoration: none;
+        background: unset;
+      }
+      &:hover {
+        color: var(--pgn-color-primary-300);
+      }
+      &.active {
+        text-decoration: none;
+        background: unset;
+        box-shadow: 0 -.25rem 0 var(--pgn-color-brand-base) inset;
+      }
+    }
+    &.nav {
+      flex-grow: 3;
+      justify-content: end;
+    }
+  }
+  .btn {
+    &.btn-link, &.btn-outline-primary {
+      &:hover {
+        color: var(--pgn-color-primary-300);
+        text-decoration: none;
+      }
+    }
+    &.btn-outline-primary {
+      background: var(--pgn-color-brand-base);
+      color: var(--pgn-color-primary-base);
+      &:focus {
+        border: none;
+        &::before {
+          border: none;
+          content: "";
+        }
+      }
+      &:hover {
+        color: var(--pgn-color-primary-base);
+      }
+    }
+    font-size: 1rem;
+    color: var(--pgn-color-white);
+  }
+  // We have to get a bit violent here, as the menu trigger itself is not able to be overwritten
+  // as a slot. With some guerilla transformation work, we can make it close to our design, however.
+  .menu-trigger.btn.btn-outline-primary {
+    // Hide the username text upstream set in here.
+    font-size: 0;
+    background-color: unset;
+    color: var(--pgn-color-white);
+    border: none;
+    &:focus {
+      color: var(--pgn-color-brand-base);
+    }
+    .avatar {
+      // Not this, though!
+      font-size: 1rem;
+      margin: 0 !important;
+    }
+    svg {
+      height: 0;
+      width: 0;
+    }
+  }
+}
+
+footer.sandbox-footer {
+  background-color: var(--pgn-color-primary-base);
+  color: var(--pgn-color-white);
+  font-size: 16px;
+  // Forcibly extend the footer downward via box shadow in a manner
+  // which does not actually increase box size, allowing it to expand
+  // to fill any remaining space if content is sparse.
+  box-shadow: 0 50vh 0 50vh var(--pgn-color-primary-base);
+  .sandbox-logo {
+    height: 60px;
+  }
+  .openedx-logo {
+    height: 40px;
+  }
+  hr {
+    border-color: var(--pgn-color-primary-400);
+  }
+  a {
+    color: var(--pgn-color-brand-base);
+  }
+}
