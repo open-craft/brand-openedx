@@ -1,0 +1,68 @@
+{
+  "color": {
+    "$type": "color",
+    "primary": {
+      "base": {
+        "$value": "#0F1F24"
+      }
+    },
+    "secondary": {
+      "base": {
+        "$value": "#1E4C59"
+      }
+    },
+    "brand": {
+      "base": {
+        "$value": "#5EFFC9"
+      }
+    },
+    "success": {
+      "base": {
+        "$value": "#178265"
+      }
+    },
+    "info": {
+      "base": {
+        "$value": "#7B96A1"
+      }
+    },
+    "warning": {
+      "base": {
+        "$value": "#FFD900"
+      }
+    },
+    "danger": {
+      "base": {
+        "$value": "#C32D3A"
+      }
+    },
+    "light": {
+      "base": {
+        "$value": "#D7E0E6"
+      }
+    },
+    "dark": {
+      "base": {
+        "$value": "#203D44"
+      }
+    },
+    "accent": {
+      "a": {
+        "source": "$accent-a",
+        "actions": {
+          "default": "{color.action.default.accent.a}"
+        },
+        "$value": "#7B96A1",
+        "$description": "Accent-A color."
+      },
+      "b": {
+        "source": "$accent-b",
+        "actions": {
+          "default": "{color.action.default.accent.b}"
+        },
+        "$value": "#2BDCAF",
+        "$description": "Accent-B color."
+      }
+    }
+  }
+}
