@@ -23,6 +23,14 @@ header.site-header-desktop, header.site-header-mobile {
 
 header.site-header-desktop {
 
+  padding-top: 1rem;
+  box-shadow: unset;
+
+  .logo img {
+    // Full resolution of the logo is preferred here-- it's right where we want it for large screens.
+    height: unset;
+  }
+
   .main-nav {
     font-size: 1rem;
     .nav-link {

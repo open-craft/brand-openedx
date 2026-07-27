@@ -12,6 +12,13 @@ header.site-header-desktop .dropdown-header.profile-label, header.site-header-mo
   color: var(--pgn-color-primary-base);
   font-weight: bold;
 }
+header.site-header-desktop {
+  padding-top: 1rem;
+  box-shadow: unset;
+}
+header.site-header-desktop .logo img {
+  height: unset;
+}
 header.site-header-desktop .main-nav {
   font-size: 1rem;
 }
@@ -96,4 +103,13 @@ footer.sandbox-footer hr {
 }
 footer.sandbox-footer a {
   color: var(--pgn-color-brand-base);
+}
+.layout .pgn__hyperlink .logo {
+  width: 186px;
+}
+.layout .pgn__hyperlink .logo-small {
+  width: 186px;
+}
+.btn-icon.notification-button {
+  background-color: var(--pgn-color-white);
 }
