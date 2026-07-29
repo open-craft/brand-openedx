@@ -21,9 +21,17 @@ header.site-header-desktop, header.site-header-mobile {
   }
 }
 
-header.site-header-desktop {
+h1.intro-header {
+  font-size: clamp(45px, 4.6vw, 64px)
+}
 
-  padding-top: 1rem;
+// Hack to make the logo appear sanely in the catalog.
+.w-100.d-flex:nth-child(2):has(a.logo img) {
+  width: unset !important;
+  padding-left: .5rem;
+}
+
+header.site-header-desktop {
   box-shadow: unset;
 
   .logo img {
